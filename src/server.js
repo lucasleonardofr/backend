@@ -22,7 +22,7 @@ mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-dgax8.mongodb.net/o
     useNewUrlParser: true
 });
 
-app.use((req, res) => {
+app.use((req, res, next) => {
     req.io = io;
 
     return next();
